@@ -1,5 +1,15 @@
-html {
+/* html {
   font-family: "Computer Modern Serif", serif;
+} */
+
+@font-face{
+  font-family: "Pentiment Humanist";
+  src: url("../fonts/Pentiment_Humanist.otf") format("opentype")
+}
+
+html{
+  font-family: "Pentiment Humanist", serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -26,7 +36,7 @@ body {
     /* border: solid;
     border-width: 100px;
     border-image: url("../images/wildflowers_left.png") ; */
-    background-image: url("../images/wildflowers1.png");
+    background-image: url("../images/wildflowers1_opt.png");
     background-size: 40%;
     background-repeat: repeat-y; 
     z-index: 1
