@@ -16,6 +16,10 @@ a {
   color: black
 }
 
+p {
+  margin-bottom: 0.25em;
+}
+
 body {
     background: white;
     color: #000;
@@ -26,78 +30,82 @@ body {
     font-style: normal;
   }
 
-  .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%;
-    pointer-events: none;
-    /* border: solid;
-    border-width: 100px;
-    border-image: url("../images/wildflowers_left.png") ; */
-    background-image: url("../images/wildflowers1_opt.png");
-    background-size: 40%;
-    background-repeat: repeat-y; 
-    z-index: 1
-  }
-  
+.smallfont {
+  font-size: x-large;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  pointer-events: none;
+  /* border: solid;
+  border-width: 100px;
+  border-image: url("../images/wildflowers_left.png") ; */
+  background-image: url("../images/wildflowers1_opt.png");
+  background-size: 40%;
+  background-repeat: repeat-y; 
+  z-index: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 0px;
+  align-items: center;
+}
+
+.row {
+  max-width: 100rem;
+  margin-inline: auto;
+  padding: 0.5rem;
+  display: inline-block;
+  align-items: center;
+}
+
+.item_black {
+  aspect-ratio: var(--ratio);
+  background: #000;
+  /* font-weight: bold; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 100%;    
+  z-index: 0;
+}
+
+.item_white {
+  aspect-ratio: var(--ratio);
+  background: #fff;
+  /* background: radial-gradient(#FFF 70%, lightgray); */
+  /* font-weight: bold; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 100%;
+  z-index: 2
+}
+
+.infobox {
+  /* font-weight: bold; */
+  font-size: 2rem;
+  align-items: center;
+  /* background: radial-gradient(#FFF 70%, lightgray); */
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 0px;
+  margin: 0 1em 0 40%;
+  z-index: 0
+}
+
+@media (max-width: 1000px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(150px, 1fr));
-    grid-template-rows: 1fr;
-    grid-gap: 0px;
-    align-items: center;
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
   }
-
-  .row {
-    max-width: 100rem;
-    margin-inline: auto;
-    padding: 0.5rem;
-    display: inline-block;
-    align-items: center;
-  }
-  
-  .item_black {
-    aspect-ratio: var(--ratio);
-    background: #000;
-    /* font-weight: bold; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    width: 100%;    
-    z-index: 0;
-  }
-
-  .item_white {
-    aspect-ratio: var(--ratio);
-    background: #FFF;
-    /* background: radial-gradient(#FFF 70%, lightgray); */
-    /* font-weight: bold; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    width: 100%;
-    z-index: 2
-  }
-
-  .infobox {
-    /* font-weight: bold; */
-    font-size: 2rem;
-    align-items: center;
-    /* background: radial-gradient(#FFF 70%, lightgray); */
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    padding: 0px;
-    margin: 0 1em 0 40%;
-    z-index: 0
-  }
-
-  @media (max-width: 1000px) {
-    .grid {
-        grid-template-columns: repeat(3, minmax(150px, 1fr));
-    }
-  }
+}
