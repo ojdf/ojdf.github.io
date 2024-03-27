@@ -30,6 +30,11 @@ body {
     font-style: normal;
   }
 
+td {
+  vertical-align: top;
+  padding-bottom: 1.5rem;
+}
+
 .smallfont {
   font-size: x-large;
 }
